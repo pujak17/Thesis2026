@@ -22,8 +22,8 @@
       <Feature key="default" val="./default_gui.html"/>
       <Feature key="black" val="./black.html"/>
     </Agent>
-    <Agent name="Emmi" device="CharamelWS">
-      <Feature key="voice" val="Marlene"/>
+    <Agent name="Mika" device="CharamelWS">
+      <Feature key="voice" val="Salli"/>
     </Agent>
   </Agents>
   <Player>

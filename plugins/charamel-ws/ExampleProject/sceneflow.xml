@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SceneFlow id="" name="default" comment="" hideLocalVar="false" hideGlobalVar="false" modifDate="Fri, 29 Nov 2024 15:19:50" start="S7;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
+<SceneFlow id="" name="default" comment="" hideLocalVar="false" hideGlobalVar="false" modifDate="Tue, 18 Feb 2025 11:48:02" start="S7;" context="" package="" xmlns="xml.sceneflow.dfki.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xml.sceneflow.dfki.de res/xsd/sceneflow.xsd">
   <Define>
   </Define>
   <Declare>
@@ -61,19 +61,19 @@
     </Declare>
     <Commands>
       <PlayAction mode="Default">
-        <StringLiteral><![CDATA[[Emmi sequence name='blackscreen']]]></StringLiteral>
+        <StringLiteral><![CDATA[[Mika sequence name='blackscreen']]]></StringLiteral>
       </PlayAction>
     </Commands>
     <TEdge target="N6" start="" timeout="5000">
     <Graphics>
       <Connection>
-        <ControlPoint xPos="269" yPos="269" ctrlXPos="241" ctrlYPos="241"/>
+        <ControlPoint xPos="389" yPos="269" ctrlXPos="361" ctrlYPos="241"/>
         <ControlPoint xPos="311" yPos="191" ctrlXPos="338" ctrlYPos="218"/>
       </Connection>
     </Graphics>
     </TEdge>
     <Graphics>
-      <Position xPos="260" yPos="260"/>
+      <Position xPos="380" yPos="260"/>
     </Graphics>
   </Node>
   <Node id="N1" name="welcome" history="false">
@@ -86,16 +86,16 @@
         <StringLiteral><![CDATA[welcome]]></StringLiteral>
       </PlayScene>
     </Commands>
-    <EEdge target="N5" start ="">
+    <TEdge target="N5" start="" timeout="300">
     <Graphics>
       <Connection>
-        <ControlPoint xPos="619" yPos="118" ctrlXPos="695" ctrlYPos="138"/>
-        <ControlPoint xPos="741" yPos="222" ctrlXPos="664" ctrlYPos="201"/>
+        <ControlPoint xPos="462" yPos="379" ctrlXPos="445" ctrlYPos="440"/>
+        <ControlPoint xPos="621" yPos="462" ctrlXPos="559" ctrlYPos="445"/>
       </Connection>
     </Graphics>
-    </EEdge>
+    </TEdge>
     <Graphics>
-      <Position xPos="560" yPos="80"/>
+      <Position xPos="440" yPos="320"/>
     </Graphics>
   </Node>
   <Node id="N5" name="name" history="false">
@@ -108,16 +108,16 @@
         <StringLiteral><![CDATA[name]]></StringLiteral>
       </PlayScene>
     </Commands>
-    <EEdge target="N1" start ="">
+    <TEdge target="N3" start="" timeout="300">
     <Graphics>
       <Connection>
-        <ControlPoint xPos="740" yPos="230" ctrlXPos="661" ctrlYPos="230"/>
-        <ControlPoint xPos="616" yPos="125" ctrlXPos="684" ctrlYPos="164"/>
+        <ControlPoint xPos="658" yPos="441" ctrlXPos="704" ctrlYPos="273"/>
+        <ControlPoint xPos="770" yPos="80" ctrlXPos="715" ctrlYPos="246"/>
       </Connection>
     </Graphics>
-    </EEdge>
+    </TEdge>
     <Graphics>
-      <Position xPos="740" yPos="200"/>
+      <Position xPos="620" yPos="440"/>
     </Graphics>
   </Node>
   <Node id="N6" name="Sequence 1" history="false">
@@ -127,14 +127,14 @@
     </Declare>
     <Commands>
       <PlayAction mode="Default">
-        <StringLiteral><![CDATA[[Emmi sequence name='Sequence 1']]]></StringLiteral>
+        <StringLiteral><![CDATA[[Mika sequence name='Sequence 1']]]></StringLiteral>
       </PlayAction>
     </Commands>
-    <TEdge target="N5" start="" timeout="250">
+    <TEdge target="N1" start="" timeout="250">
     <Graphics>
       <Connection>
-        <ControlPoint xPos="311" yPos="149" ctrlXPos="448" ctrlYPos="15"/>
-        <ControlPoint xPos="762" yPos="259" ctrlXPos="709" ctrlYPos="449"/>
+        <ControlPoint xPos="311" yPos="149" ctrlXPos="368" ctrlYPos="91"/>
+        <ControlPoint xPos="478" yPos="321" ctrlXPos="499" ctrlYPos="241"/>
       </Connection>
     </Graphics>
     </TEdge>
@@ -152,13 +152,41 @@
     <TEdge target="N141" start="" timeout="5000">
     <Graphics>
       <Connection>
-        <ControlPoint xPos="199" yPos="402" ctrlXPos="275" ctrlYPos="381"/>
-        <ControlPoint xPos="261" yPos="298" ctrlXPos="184" ctrlYPos="318"/>
+        <ControlPoint xPos="199" yPos="402" ctrlXPos="285" ctrlYPos="378"/>
+        <ControlPoint xPos="380" yPos="290" ctrlXPos="290" ctrlYPos="290"/>
       </Connection>
     </Graphics>
     </TEdge>
     <Graphics>
       <Position xPos="140" yPos="380"/>
+    </Graphics>
+  </Node>
+  <Node id="N3" name="praise" history="false">
+    <Define>
+    </Define>
+    <Declare>
+    </Declare>
+    <Commands>
+      <PlayScene>
+        <StringLiteral><![CDATA[praise]]></StringLiteral>
+      </PlayScene>
+    </Commands>
+    <Graphics>
+      <Position xPos="740" yPos="20"/>
+    </Graphics>
+  </Node>
+  <Node id="N4" name="help" history="false">
+    <Define>
+    </Define>
+    <Declare>
+    </Declare>
+    <Commands>
+      <PlayScene>
+        <StringLiteral><![CDATA[help]]></StringLiteral>
+      </PlayScene>
+    </Commands>
+    <Graphics>
+      <Position xPos="560" yPos="80"/>
     </Graphics>
   </Node>
   <SuperNode id="S7" name="wait for;agent" comment="" hideLocalVar="false" hideGlobalVar="false" start="N110;">
@@ -172,7 +200,7 @@
       <Graphics>
         <Connection>
           <ControlPoint xPos="80" yPos="290" ctrlXPos="119" ctrlYPos="290"/>
-          <ControlPoint xPos="170" yPos="380" ctrlXPos="170" ctrlYPos="340"/>
+          <ControlPoint xPos="178" yPos="381" ctrlXPos="170" ctrlYPos="340"/>
         </Connection>
       </Graphics>
       <SimpleVariable name="avatar_connected"/>
